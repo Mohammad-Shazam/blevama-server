@@ -14,21 +14,21 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'mosuleiman128@gmail.com', // Your email
-        pass: 'rmzn kgus igmf cryf', // Your app password
+        user: 'blevamawebsite@gmail.com',
+        pass: 'eddn tqau wwii umuq',
     },
     tls: {
-        rejectUnauthorized: false, // ✅ Fix SSL issue
+        rejectUnauthorized: false,
     },
 });
 
 
 // Email endpoint
 app.post('/send-email', (req, res) => {
-    
+
     const { to, subject, html } = req.body;
     const mailOptions = {
-        from: 'mosuleiman128@gmail.com', // ✅ Correct email address
+        from: 'blevamawebsite@gmail.com',
         to,
         subject,
         html,
